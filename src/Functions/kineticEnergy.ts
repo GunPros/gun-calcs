@@ -1,3 +1,8 @@
+import type {
+  kineticEnergyParamsType,
+  kineticEnergyReturnType,
+} from "./kineticEnergyTypes"
+
 /**
  * @description Calculate the kinetic energy of a bullet
  * @returns kineticEnergy in Foot-Pounds
@@ -5,15 +10,11 @@
  * kineticEnergy({bulletWeightGrains: 0, velocityFps: 3050})//returns { kineticEnergyFtLbs: null, error: true; errorMessage: "kineticEnergy Error(s): bulletWeightGrains param must be of type number and greater than 0."}
  * kineticEnergy({bulletWeightGrains: 62, velocityFps: undefined})//returns { kineticEnergyFtLbs: null, error: true; errorMessage: "kineticEnergy Error(s): velocityFps param must be of type number and greater than 0."}
  */
-export default function kineticEnergy({
-  bulletWeightGrains,
-  velocityFps,
-}: {
-  bulletWeightGrains: number
-  velocityFps: number
-}):
-  | { kineticEnergyFtLbs: number; error: false; errorMessage: null }
-  | { kineticEnergyFtLbs: null; error: true; errorMessage: string } {
+export default function kineticEnergy(
+  kineticEnergyParams: kineticEnergyParamsType,
+): kineticEnergyReturnType {
+  let { bulletWeightGrains, velocityFps } = kineticEnergyParams
+
   let error = false
   let errorMessage = `kineticEnergy Error(s):`
   if (typeof bulletWeightGrains !== "number" || bulletWeightGrains <= 0) {
