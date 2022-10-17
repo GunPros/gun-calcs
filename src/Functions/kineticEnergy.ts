@@ -1,3 +1,10 @@
+/**
+ * @description Calculate the kinetic energy of a bullet
+ * @returns kineticEnergy in Foot-Pounds
+ * @example kineticEnergy({bulletWeightGrains: 62, velocityFps: 3050})//returns {kineticEnergyFtLbs: 1280.4371764246198, error: false, errorMessage: null}
+ * kineticEnergy({bulletWeightGrains: 0, velocityFps: 3050})//returns { kineticEnergyFtLbs: null, error: true; errorMessage: "kineticEnergy Error(s): bulletWeightGrains param must be of type number and greater than 0."}
+ * kineticEnergy({bulletWeightGrains: 62, velocityFps: undefined})//returns { kineticEnergyFtLbs: null, error: true; errorMessage: "kineticEnergy Error(s): velocityFps param must be of type number and greater than 0."}
+ */
 export default function kineticEnergy({
   bulletWeightGrains,
   velocityFps,
