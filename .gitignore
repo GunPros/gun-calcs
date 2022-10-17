@@ -2,3 +2,4 @@ node_modules/
 coverage
 settings.json
 lib/
+src/functions/ballisticTrajectory
