@@ -29,7 +29,8 @@ export default function kineticEnergy(
 
   if (error) return { kineticEnergyFtLbs: null, error, errorMessage }
 
-  let kineticEnergy = (bulletWeightGrains * Math.pow(velocityFps, 2)) / (14000 * 32.174)
+  let bulletMass = bulletWeightGrains / (7000 * 32.174)
+  let kineticEnergy = (bulletMass * Math.pow(velocityFps, 2)) / 2
 
   return { kineticEnergyFtLbs: kineticEnergy, error: false, errorMessage: null }
 }

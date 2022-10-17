@@ -3,7 +3,7 @@ import kineticEnergy from "../Functions/kineticEnergy"
 test.each([
   [50, 1200, 159.84512783170084],
   [115, 1150, 337.6450816542195],
-  [62, 3050, 1280.4371764246198],
+  [62, 3050, 1280.4371764246196],
 ])(
   "kineticEnergy Valid Tests",
   (bulletWeightGrains, velocityFps, calculatedKineticEnergy) => {
