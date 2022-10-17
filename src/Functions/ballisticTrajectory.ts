@@ -1,4 +1,4 @@
-export default function BallisticTrajectoryCalculator({
+export default function ballisticTrajectory({
   intervalYards,
   maxRangeYards,
   dragCoefficient,
@@ -52,12 +52,14 @@ export default function BallisticTrajectoryCalculator({
   //return { error: boolean; errorMessage: string } if missing or invalid params
   if (paramErrors.error) {
     return paramErrors
-  } else {
-    //Calculate Coefficient
   }
+  return paramErrors
+  //  else {
+  //   //Calculate Coefficient
+  // }
 }
 
-//validate all params passed to BallisticTrajectoryCalculator
+//validate all params passed to ballisticTrajectory
 export function validateParams({
   intervalYards,
   maxRangeYards,
@@ -92,7 +94,7 @@ export function validateParams({
   humidityPercent: number //0-100%
 }): { error: boolean; errorMessage: string } {
   let isError = false
-  let errorMessage = `BallisticTrajectoryCalculator Error(s):`
+  let errorMessage = `ballisticTrajectory Error(s):`
   if (
     typeof maxRangeYards !== "number" ||
     typeof intervalYards !== "number" ||

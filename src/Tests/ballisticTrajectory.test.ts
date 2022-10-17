@@ -1,6 +1,4 @@
-import BallisticTrajectoryCalculator, {
-  validateParams,
-} from "../Functions/BallisticTrajectoryCalculator"
+import ballisticTrajectory, { validateParams } from "../Functions/ballisticTrajectory"
 
 test.each([
   [
@@ -24,7 +22,7 @@ test.each([
     {
       error: true,
       errorMessage:
-        `BallisticTrajectoryCalculator Error(s):` +
+        `ballisticTrajectory Error(s):` +
         `\ntemperatureFahrenheit must be of type number.`,
     },
   ],
@@ -49,7 +47,7 @@ test.each([
     {
       error: true,
       errorMessage:
-        `BallisticTrajectoryCalculator Error(s):` +
+        `ballisticTrajectory Error(s):` +
         `\nhumidityPercent must be of type number && >=0 && <=100.`,
     },
   ],
@@ -57,7 +55,7 @@ test.each([
     {},
     {
       error: true,
-      errorMessage: `BallisticTrajectoryCalculator Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
+      errorMessage: `ballisticTrajectory Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
     },
   ],
   [
@@ -80,7 +78,7 @@ test.each([
     },
     {
       error: true,
-      errorMessage: `BallisticTrajectoryCalculator Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
+      errorMessage: `ballisticTrajectory Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
     },
   ],
   [
@@ -103,7 +101,7 @@ test.each([
     },
     {
       error: true,
-      errorMessage: `BallisticTrajectoryCalculator Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
+      errorMessage: `ballisticTrajectory Error(s):\nintervalYards must be a number > 0 && < maxRangeYards.\nmaxRangeYards must be a number >= 100 && <= 2000\ndragCoefficient must be "G1" | "G2" | "G5" | "G6" | "G7" | "G8" | "GL"\nballisticCoefficient must be of type number && >0.\nbulletWeightGrains must be of type number && >0.\nvelocityFps must be of type number && >0.\nzeroRangeYards must be of type number && >0.\nsightHeightInches must be of type number && >0.\nshootingAngleDegrees must be of type number && between -90 and 90.\nwindSpeedMph must be of type number.\nwindAngleDegree must be of type number && >= 0 && < 360.\naltitudeFeet must be of type number.\nbarometricPressureHg must be of type number && >0.\ntemperatureFahrenheit must be of type number.\nhumidityPercent must be of type number && >=0 && <=100.`,
     },
   ],
 ])("validateParams Invalid Tests", (inputObject, outputObject) => {
