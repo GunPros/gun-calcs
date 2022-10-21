@@ -5,4 +5,5 @@ import type {
 } from "./Functions/kineticEnergyTypes"
 import { ftLbsToJoules } from "./Functions/UnitsConversion"
 
-export { kineticEnergy, kineticEnergyParamsType, kineticEnergyReturnType, ftLbsToJoules }
+export { kineticEnergy, ftLbsToJoules }
+export type { kineticEnergyParamsType, kineticEnergyReturnType }
